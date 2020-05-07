@@ -1,14 +1,19 @@
 package se.lexicon.model;
 
 public class Person {
-    private final int personID;
-    private String firstName;
-    private String lastName;
+    public final int personID;
+    public String firstName;
+    public String lastName;
 
     public Person(int personID, String firstName, String lastName) {
         this.personID = personID;
         this.firstName = firstName;
         this.lastName = lastName;
+    }
+
+    public Person(int personID) {
+
+        this.personID = personID;
     }
 
     public int getPersonID() {
