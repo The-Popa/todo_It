@@ -1,14 +1,10 @@
 package se.lexicon.data;
 
 public class PersonSequencer {
-
-    private static int personId;
-
     static int counter = 0;
 
     public static int nextPersonId() {
         return ++counter;
-
     }
 
     public static int getPersonId() {
@@ -16,7 +12,8 @@ public class PersonSequencer {
 
     }
 
-    public static void resetPersonId() {
+    public static void reset() {
         counter = 0;
+
     }
 }

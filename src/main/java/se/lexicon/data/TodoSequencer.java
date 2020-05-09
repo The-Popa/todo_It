@@ -1,11 +1,7 @@
 package se.lexicon.data;
 
 public class TodoSequencer {
-
-    private static int todoId;
-
     static int counter = 0;
-
     public static int nextTodoId() {
         return ++counter;
 
@@ -16,7 +12,8 @@ public class TodoSequencer {
 
     }
 
-    public static void resetTodoId() {
+    public static void reset() {
         counter = 0;
+
     }
 }

@@ -1,22 +1,33 @@
 package se.lexicon.model;
 
 public class Todo {
-    public final int toDoId;
-    public String description;
-    public boolean done;
 
-    public Todo(int toDoId, String description) {
-        this.toDoId = toDoId;
+    private final int TodoId;
+    private String description;
+    private boolean done;
+    private Person assignee;
+
+
+    public Todo() {
+        this.TodoId = getTodoId();
+    }
+
+
+    public Todo(final int todoId, String description) {
+        TodoId = todoId;
         this.description = description;
     }
 
-    public int getToDoId() {
-        return toDoId;
+
+    public int getTodoId() {
+        return TodoId;
     }
+
 
     public String getDescription() {
         return description;
     }
+
 
     public void setDescription(String description) {
         this.description = description;
@@ -28,5 +39,13 @@ public class Todo {
 
     public void setDone(boolean done) {
         this.done = done;
+    }
+
+    public Person getAssignee() {
+        return assignee;
+    }
+
+    public void setAssignee(Person assignee) {
+        this.assignee = assignee;
     }
 }
