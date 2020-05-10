@@ -8,8 +8,8 @@ import static org.junit.Assert.assertEquals;
 public class PersonTest {
 
     public static final int personId = 741016;
-    public static final String firstName = "Tobias";
-    public static final String lastName = "Carlstrom";
+    public static String firstName = "Tobias";
+    public static String lastName = "Carlstrom";
     private final Person testPerson;
 
     public PersonTest(Person testPerson) {

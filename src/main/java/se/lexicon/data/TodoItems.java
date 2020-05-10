@@ -7,13 +7,12 @@ import static se.lexicon.data.TodoSequencer.nextTodoId;
 
 public class TodoItems {
     private static Todo[] todo = new Todo[0];
-
     public TodoItems() {
 
     }
 
     public TodoItems(Todo[] todo) {
-        this.todo = todo;
+        TodoItems.todo = todo;
 
     }
 
@@ -39,9 +38,9 @@ public class TodoItems {
 
     public Todo FindById(int todoId) {
         Todo matchTodo = new Todo();
-        for (int i = 0; i < todo.length; i++) {
-            if (todoId == todo[i].getTodoId()) {
-                matchTodo = todo[i];
+        for (Todo value : todo) {
+            if (todoId == value.getTodoId()) {
+                matchTodo = value;
                 break;
 
             }

@@ -1,31 +1,25 @@
 package se.lexicon.data;
 
 import se.lexicon.model.Person;
-
 import java.util.Arrays;
-
 import static se.lexicon.data.PersonSequencer.nextPersonId;
 
 
 public class People {
     private static Person[] person = new Person[0];
-
     public People() {
 
     }
 
     public People(Person[] person) {
-        this.person = person;
+        People.person = person;
     }
-
     public static Person[] getPerson() {
         return person;
     }
-
     public static void setPerson(Person[] person) {
         People.person = person;
     }
-
     public int size() {
         return person.length;
     }
@@ -36,9 +30,9 @@ public class People {
 
     public Person findById(int personId) {
         Person matchPerson = new Person();
-        for (int i = 0; i < person.length; i++) {
-            if (personId == person[i].getPersonId()) {
-                matchPerson = person[i];
+        for (Person value : person) {
+            if (personId == value.getPersonId()) {
+                matchPerson = value;
                 break;
             }
         }
